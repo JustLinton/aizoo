@@ -1,0 +1,72 @@
+{
+    "name": "DeformConv2d",
+    "description": "Performs Deformable Convolution v2, described in Deformable ConvNets v2: More Deformable, Better Results if mask is not None and Performs Deformable Convolution, described in Deformable Convolutional Networks if mask is None.",
+    "framework": "pytorch",
+    "frameworkVersion": "latest",
+    "example": "",
+    "outputs": [
+        {
+            "name": "output",
+            "datatype": "aizoo.tensor",
+            "description": "the output tensor"
+        }
+    ],
+    "inputs": [
+        {
+            "name": "input",
+            "datatype": "aizoo.tensor",
+            "description": "(Tensor[batch_size, in_channels, in_height, in_width]) – input tensor."
+        },
+        {
+            "name": "offset",
+            "datatype": "aizoo.tensor",
+            "description": " (Tensor[batch_size, 2 * offset_groups * kernel_height * kernel_width, out_height, out_width]) – offsets to be applied for each position in the convolution kernel."
+        },
+        {
+            "name": "mask",
+            "datatype": "aizoo.tensor",
+            "description": "The mask tensor."
+        }
+    ],
+	"properties": {
+		"in_channels": {
+            "defaultType": "aizoo.number",
+            "type": "aizoo.number"
+        },
+		"out_channels": {
+            "defaultType": "aizoo.number",
+            "type": "aizoo.number"
+        },
+        "kernel_size": {
+            "defaultType": "aizoo.number",
+            "type": "aizoo.number"
+        },
+        "stride": {
+            "defaultType": "aizoo.number",
+            "type": "aizoo.number",
+            "value": 1
+        },
+        "padding": {
+            "defaultType": "aizoo.number",
+            "type": "aizoo.number",
+            "value": 0
+        },
+        "dilation": {
+            "defaultType": "aizoo.number",
+            "type": "aizoo.number",
+            "value": 1
+        },
+        "groups": {
+            "defaultType": "aizoo.number",
+            "type": "aizoo.number",
+            "value": 1
+        },
+        "bias": {
+            "defaultType": "aizoo.bool",
+            "type": "aizoo.bool",
+            "value": true
+        },
+        "_description": "input (Tensor[batch_size, in_channels, in_height, in_width]) – input tensor\noffset (Tensor[batch_size, 2 * offset_groups * kernel_height * kernel_width, out_height, out_width]) – offsets to be applied for each position in the convolution kernel.\nweight (Tensor[out_channels, in_channels // groups, kernel_height, kernel_width]) – convolution weights, split into groups of size (in_channels // groups)\nbias (Tensor[out_channels]) – optional bias of shape (out_channels,). Default: None\nstride (int or Tuple[int, int]) – distance between convolution centers. Default: 1\npadding (int or Tuple[int, int]) – height/width of padding of zeroes around each image. Default: 0\ndilation (int or Tuple[int, int]) – the spacing between kernel elements. Default: 1\nmask (Tensor[batch_size, offset_groups * kernel_height * kernel_width, out_height, out_width]) – masks to be applied for each position in the convolution kernel. Default: None."
+    },
+    "componentVersion": "1.0.0"
+}

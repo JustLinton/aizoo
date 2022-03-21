@@ -1,0 +1,28 @@
+{
+    "name": "relu6",
+    "description": "Applies the element-wise function ReLU6(x)=min(max(0,x),6).",
+    "framework": "pytorch",
+    "frameworkVersion": "latest",
+    "example": " input = torch.randn(2) \r\n >>> output = torch.nn.functional.(input) ",
+    "outputs": [
+        {
+            "name": "output",
+            "datatype": "aizoo.tensor",
+            "description": "The output tensor."
+        }
+    ],
+    "inputs": [
+        {
+            "name": "input",
+            "datatype": "aizoo.tensor",
+            "description": "The input tensor."
+        },
+        {
+            "name": "inplace",
+            "datatype": "aizoo.bool",
+            "description": "can optionally do the operation in-place",
+            "value": false
+        }
+    ],
+    "componentVersion": "1.0.0"
+}

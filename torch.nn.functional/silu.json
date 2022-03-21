@@ -1,0 +1,27 @@
+{
+    "name": "silu",
+    "description": "pplies the Sigmoid Linear Unit (SiLU) function, element-wise. The SiLU function is also known as the swish function. silu(x)=x∗σ(x),where σ(x) is the logistic sigmoid.",
+    "framework": "pytorch",
+    "frameworkVersion": "latest",
+    "outputs": [
+        {
+            "name": "output",
+            "datatype": "aizoo.tensor",
+            "description": "The output tensor."
+        }
+    ],
+    "inputs": [
+        {
+            "name": "input",
+            "datatype": "aizoo.tensor",
+            "description": "The input tensor."
+        },
+        {
+            "name": "inplace",
+            "datatype": "aizoo.bool",
+            "description": "Can optionally do the operation in-place. Default: False.",
+             "value": false
+        }
+    ],
+    "componentVersion": "1.0.0"
+}

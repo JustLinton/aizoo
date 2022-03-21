@@ -1,0 +1,32 @@
+{
+    "name": "nms",
+    "description": "Performs non-maximum suppression (NMS) on the boxes according to their intersection-over-union (IoU).",
+    "framework": "pytorch",
+    "frameworkVersion": "latest",
+    "example": "",
+    "outputs": [
+        {
+            "name": "output",
+            "datatype": "aizoo.tensor",
+            "description": "The output tensor."
+        }
+    ],
+    "inputs": [
+        {
+            "name": "boxes",
+            "datatype": "aizoo.tensor",
+            "description": "(Tensor[batch_size, in_channels, in_height, in_width]) – input tensor"
+        },
+        {
+            "name": "scores",
+            "datatype": "aizoo.tensor",
+            "description": "(Tensor[N]) – scores for each one of the boxes."
+        },
+        {
+            "name": "iou_threshold",
+            "datatype": "aizoo.number",
+            "description": "(float) – discards all overlapping boxes with IoU > iou_threshold."
+        }
+    ],
+    "componentVersion": "1.0.0"
+}

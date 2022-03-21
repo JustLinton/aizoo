@@ -1,0 +1,44 @@
+{
+    "name": "VideoResNet",
+    "description": "Constructs video classification models including ResNet 3D 18,ResNet MC 18 and ResNet (2+1)D.",
+    "framework": "pytorch",
+    "frameworkVersion": "latest",
+    "example": "",
+    "outputs": [
+        {
+            "name": "output",
+            "datatype": "aizoo.tensor",
+            "description": "The output tensor."
+        }
+    ],
+    "inputs": [
+        {
+            "name": "images",
+            "datatype": "aizoo.tensor",
+            "description": "the input x."
+        }
+    ],
+	"properties": {
+		"pretrained": {
+            "defaultType": "aizoo.bool",
+            "type": "aizoo.bool",
+            "value": false
+        },
+		"progress": {
+            "defaultType": "aizoo.bool",
+            "type": "aizoo.bool",
+            "value": true
+        },
+        "num_classes": {
+            "defaultType": "aizoo.number",
+            "type": "aizoo.number",
+            "value": 400
+        },
+        "zero_init_residual": {
+            "defaultType": "aizoo.bool",
+            "type": "aizoo.bool",
+            "value": false
+        }
+    },
+    "componentVersion": "1.0.0"
+}

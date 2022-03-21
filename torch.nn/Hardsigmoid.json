@@ -1,0 +1,31 @@
+{
+    "name": "Hardsigmoid",
+    "description": "Applies the element-wise function.",
+    "framework": "pytorch",
+    "frameworkVersion": "latest",
+    "example": "  m = nn.Hardsigmoid() \r\n input = torch.randn(2) \r\n output = m(input)",
+    "outputs": [
+        {
+            "name": "output",
+            "datatype": "aizoo.tensor",
+            "description": "The output tensor."
+        }
+
+    ],
+    "inputs": [
+        {
+            "name": "input",
+            "datatype": "aizoo.tensor",
+            "description": "The input tensor."
+        }
+    ],
+	"properties": {
+        "inplace": {
+            "type": "aizoo.bool",
+            "value": false,
+            "defaultType":"aizoo.bool"
+        },
+      "_description": "inplace: can optionally do the operation in-place. Default: ``False``."
+    },
+    "componentVersion": "1.0.2"
+}

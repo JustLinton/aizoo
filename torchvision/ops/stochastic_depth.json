@@ -1,0 +1,38 @@
+{
+    "name": "stochastic_depth",
+    "description": "Original implementation from https://github.com/facebookresearch/fvcore/blob/master/fvcore/nn/focal_loss.py . Loss used in RetinaNet for dense detection: https://arxiv.org/abs/1708.02002.",
+    "framework": "pytorch",
+    "frameworkVersion": "latest",
+    "example": "",
+    "outputs": [
+        {
+            "name": "output",
+            "datatype": "aizoo.tensor",
+            "description": "The output tensor."
+        }
+    ],
+    "inputs": [
+        {
+            "name": "input",
+            "datatype": "aizoo.tensor",
+            "description": "(Tensor[N, ..]) – The input tensor or arbitrary dimensions with the first one being its batch i.e. a batch with N rows."
+        },
+        {
+            "name": "p",
+            "datatype": "aizoo.number",
+            "description": "(float) – probability of the input to be zeroed."
+        },
+        {
+            "name": "mode",
+            "datatype": "aizoo.string",
+            "description": " (str) – \"batch\" or \"row\". \"batch\" randomly zeroes the entire input, \"row\" zeroes randomly selected rows from the batch."
+        },
+        {
+            "name": "training",
+            "datatype": "aizoo.bool",
+            "description": "Apply stochastic depth if is True. Default: True.",
+            "value":true
+        }
+    ],
+    "componentVersion": "1.0.0"
+}

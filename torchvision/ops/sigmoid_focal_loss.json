@@ -1,0 +1,45 @@
+{
+    "name": "sigmoid_focal_loss",
+    "description": "Original implementation from https://github.com/facebookresearch/fvcore/blob/master/fvcore/nn/focal_loss.py . Loss used in RetinaNet for dense detection: https://arxiv.org/abs/1708.02002.",
+    "framework": "pytorch",
+    "frameworkVersion": "latest",
+    "example": "",
+    "outputs": [
+        {
+            "name": "output",
+            "datatype": "aizoo.tensor",
+            "description": "The output tensor."
+        }
+    ],
+    "inputs": [
+        {
+            "name": "inputs",
+            "datatype": "aizoo.tensor",
+            "description": "A float tensor of arbitrary shape. The predictions for each example."
+        },
+        {
+            "name": "targets",
+            "datatype": "aizoo.tensor",
+            "description": "A float tensor with the same shape as inputs. Stores the binary classification label for each element in inputs (0 for the negative class and 1 for the positive class)."
+        },
+        {
+            "name": "alpha",
+            "datatype": "aizoo.array",
+            "description": "(optional) Weighting factor in range (0,1) to balance positive vs negative examples or -1 for ignore. Default = 0.25",
+            "value": 0.25
+        },
+        {
+            "name": "gamma",
+            "datatype": "aizoo.number",
+            "description": "Exponent of the modulating factor (1 - p_t) to balance easy vs hard examples.",
+            "value":2
+        },
+        {
+            "name": "reduction",
+            "datatype": "aizoo.string",
+            "description": "‘none’ | ‘mean’ | ‘sum’ ‘none’: No reduction will be applied to the output. ‘mean’: The output will be averaged. ‘sum’: The output will be summed.",
+            "value":"none"
+        }
+    ],
+    "componentVersion": "1.0.0"
+}

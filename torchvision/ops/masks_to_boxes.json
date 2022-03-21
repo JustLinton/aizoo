@@ -1,0 +1,22 @@
+{
+    "name": "masks_to_boxes",
+    "description": "Compute the bounding boxes around the provided masks. Returns a [N, 4] tensor containing bounding boxes. The boxes are in (x1, y1, x2, y2) format with 0 <= x1 < x2 and 0 <= y1 < y2.",
+    "framework": "pytorch",
+    "frameworkVersion": "latest",
+    "example": "",
+    "outputs": [
+        {
+            "name": "output",
+            "datatype": "aizoo.tensor",
+            "description": "The output tensor."
+        }
+    ],
+    "inputs": [
+        {
+            "name": "masks",
+            "datatype": "aizoo.tensor",
+            "description": "(Tensor[N, H, W]) – masks to transform where N is the number of masks and (H, W) are the spatial dimensions."
+        }
+    ],
+    "componentVersion": "1.0.0"
+}

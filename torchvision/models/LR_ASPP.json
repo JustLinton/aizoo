@@ -1,0 +1,40 @@
+{
+    "name": "LR_ASPP",
+    "description": "Constructs a LR_ASPP model with a provided backbone.",
+    "framework": "pytorch",
+    "frameworkVersion": "latest",
+    "example": "",
+    "outputs": [
+        {
+            "name": "output",
+            "datatype": "aizoo.unknown",
+            "description": "The result."
+        }
+    ],
+    "inputs": [
+        {
+            "name": "input",
+            "datatype": "aizoo.tensor",
+            "description": "the input tensor"
+        }
+    ],
+	"properties": {
+		"pretrained": {
+            "defaultType": "aizoo.bool",
+            "type": "aizoo.bool",
+            "value": false
+        },
+		"progress": {
+            "defaultType": "aizoo.bool",
+            "type": "aizoo.bool",
+            "value": true
+        },
+        "num_classes": {
+            "defaultType": "aizoo.number",
+            "type": "aizoo.number",
+            "value": 21
+        },
+      "_description": "pretrained (bool): If True, returns a model pre-trained on ImageNet\nprogress (bool): If True, displays a progress bar of the download to stderr\nnum_classes (int): Number of categories"
+    },
+    "componentVersion": "1.0.0"
+}

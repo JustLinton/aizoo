@@ -1,0 +1,42 @@
+{
+    "name": "PSRoIAlign",
+    "description": "Performs Region of Interest (RoI) Align operator with average pooling, as described in Mask R-CNN.",
+    "framework": "pytorch",
+    "frameworkVersion": "latest",
+    "example": "",
+    "outputs": [
+        {
+            "name": "output",
+            "datatype": "aizoo.tensor",
+            "description": "the output tensor"
+        }
+    ],
+    "inputs": [
+        {
+            "name": "input",
+            "datatype": "aizoo.tensor",
+            "description": "The input tensor, i.e. a batch with N elements. Each element contains C feature maps of dimensions H x W. If the tensor is quantized, we expect a batch size of N == 1."
+        },
+        {
+            "name": "rois",
+            "datatype": "aizoo.tensor",
+            "description": "The rois tensor."
+        }
+    ],
+	"properties": {
+		"output_size": {
+            "defaultType": "aizoo.array",
+            "type": "aizoo.array"
+        },
+		"spatial_scale": {
+            "defaultType": "aizoo.number",
+            "type": "aizoo.number"
+        },
+        "sampling_ratio": {
+            "defaultType": "aizoo.number",
+            "type": "aizoo.number"
+        },
+        "_description": "output_size (int or Tuple[int, int]) – the size of the output (in bins or pixels) after the pooling is performed, as (height, width). \n spatial_scale (float) – a scaling factor that maps the input coordinates to the box coordinates. Default: 1.0  \n sampling_ratio (int) – number of sampling points in the interpolation grid used to compute the output value of each pooled output bin. If > 0, then exactly sampling_ratio x sampling_ratio sampling points per bin are used. If <= 0, then an adaptive number of grid points are used (computed as ceil(roi_width / output_width), and likewise for height). Default: -1."
+    },
+    "componentVersion": "1.0.0"
+}

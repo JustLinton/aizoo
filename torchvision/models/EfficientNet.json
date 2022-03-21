@@ -1,0 +1,49 @@
+{
+    "name": "EfficientNet",
+    "description": "Constructs a EfficientNet architecture from “EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks”.",
+    "framework": "pytorch",
+    "frameworkVersion": "latest",
+    "example": "",
+    "outputs": [
+        {
+            "name": "output",
+            "datatype": "aizoo.tensor",
+            "description": "the output tensor"
+        }
+    ],
+    "inputs": [
+        {
+            "name": "x",
+            "datatype": "aizoo.tensor",
+            "description": "the input tensor"
+        }
+    ],
+	"properties": {
+        "model_name": {
+            "defaultType": "aizoo.string",
+            "type": "None"
+        },
+		"pretrained": {
+            "defaultType": "aizoo.bool",
+            "type": "aizoo.bool",
+            "value": false
+        },
+		"progress": {
+            "defaultType": "aizoo.bool",
+            "type": "aizoo.bool",
+            "value": true
+        },
+        "stochastic_depth_prob":{
+            "defaultType": "aizoo.number",
+            "type": "aizoo.number",
+            "value": 0.2 
+        },
+        "num_classes": {
+            "defaultType": "aizoo.number",
+            "type": "aizoo.number",
+            "value": 1000
+        },
+      "_description": "model_name (string): Specific variant model of the EfficientNet model class, containing efficientnet_b0, efficientnet_b1... \npretrained (bool): If True, returns a model pre-trained on ImageNet\nprogress (bool): If True, displays a progress bar of the download to stderr\nnum_classes (int): Number of categories"
+    },
+    "componentVersion": "1.0.0"
+}

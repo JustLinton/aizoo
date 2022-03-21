@@ -1,0 +1,28 @@
+{
+    "name": "leaky_relu_",
+    "description": "Applies element-wise, LeakyReLU(x)=max(0,x)+negative_slope∗min(0,x). The in-place version.",
+    "framework": "pytorch",
+    "frameworkVersion": "latest",
+    "example": " input = torch.randn(2) \r\n >>> output = torch.nn.functional.leaky_relu_(input) ",
+    "outputs": [
+        {
+            "name": "output",
+            "datatype": "aizoo.tensor",
+            "description": "The output tensor."
+        }
+    ],
+    "inputs": [
+        {
+            "name": "input",
+            "datatype": "aizoo.tensor",
+            "description": "The input tensor."
+        },
+        {
+            "name": "negative_slope",
+            "datatype": "aizoo.number",
+            "description": "The input tensor.",
+            "value": 0.01
+        }
+    ],
+    "componentVersion": "1.0.0"
+}

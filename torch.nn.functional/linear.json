@@ -1,0 +1,31 @@
+{
+    "name": "linear",
+    "description": "Applies a linear transformation to the incoming data: y = xA^T + b.",
+    "framework": "pytorch",
+    "frameworkVersion": "latest",
+    "outputs": [
+        {
+            "name": "output",
+            "datatype": "aizoo.tensor",
+            "description": "The output tensor."
+        }
+    ],
+    "inputs": [
+        {
+            "name": "input",
+            "datatype": "aizoo.tensor",
+            "description":  "The input tensor."
+        },
+        {
+            "name": "weight",
+            "datatype": "aizoo.tensor"
+        },
+        {
+            "name": "bias",
+            "datatype": "aizoo.tensor",
+            "value": null
+        }
+       
+    ],
+    "componentVersion": "1.0.0"
+}

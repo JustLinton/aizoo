@@ -1,0 +1,28 @@
+{
+    "name": "log_softmax",
+    "description": "Applies a softmax followed by a logarithm. While mathematically equivalent to log(softmax(x)), doing these two operations separately is slower and numerically unstable. This function uses an alternative formulation to compute the output and gradient correctly.",
+    "framework": "pytorch",
+    "frameworkVersion": "latest",
+    "outputs": [
+        {
+            "name": "output",
+            "datatype": "aizoo.tensor",
+            "description": "The output tensor."
+        }
+    ],
+    "inputs": [
+        {
+            "name": "input",
+            "datatype": "aizoo.tensor",
+            "description": "The input tensor.  Unnormalized log probabilities."
+        },
+        {
+            "name": "dim",
+            "datatype": "aizoo.number",
+            "description": "A dimension along which softmax will be computed. Default: none.",
+            "value": null
+        }
+        
+    ],
+    "componentVersion": "1.0.0"
+}

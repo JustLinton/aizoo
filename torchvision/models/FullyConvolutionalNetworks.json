@@ -1,0 +1,44 @@
+{
+    "name": "FullyConvolutionalNetworks",
+    "description": "Constructs a FullyConvolutionalNetwork model with a provided backbone.",
+    "framework": "pytorch",
+    "frameworkVersion": "latest",
+    "example": "",
+    "outputs": [
+        {
+            "name": "output",
+            "datatype": "aizoo.unknown",
+            "description": "The result."
+        }
+    ],
+    "inputs": [
+        {
+            "name": "x",
+            "datatype": "aizoo.tensor",
+            "description": "the input tensor"
+        }
+    ],
+	"properties": {
+        "model_name": {
+            "defaultType": "aizoo.string",
+            "type": "None"
+        },
+		"pretrained": {
+            "defaultType": "aizoo.bool",
+            "type": "aizoo.bool",
+            "value": false
+        },
+		"progress": {
+            "defaultType": "aizoo.bool",
+            "type": "aizoo.bool",
+            "value": true
+        },
+        "num_classes": {
+            "defaultType": "aizoo.number",
+            "type": "aizoo.number",
+            "value": 21
+        },
+      "_description": "model_name (string): Specific variant model of the Faster R-CNN model class, containing fasterrcnn_resnet50_fpn,fasterrcnn_mobilenet_v3_large_320_fpn... \npretrained (bool): If True, returns a model pre-trained on ImageNet\nprogress (bool): If True, displays a progress bar of the download to stderr\nnum_classes (int): Number of categories"
+    },
+    "componentVersion": "1.0.0"
+}

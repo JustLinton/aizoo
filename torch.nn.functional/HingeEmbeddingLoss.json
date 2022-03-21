@@ -1,0 +1,32 @@
+{
+	"name": "HingeEmbeddingLoss",
+	"description": "Measures the loss given an input tensor xx and a labels tensor yy (containing 1 or -1). This is usually used for measuring whether two inputs are similar or dissimilar, e.g. using the L1 pairwise distance as xx, and is typically used for learning nonlinear embeddings or semi-supervised learning.",
+	"framework": "pytorch",
+	"frameworkVersion": "latest",
+	"example": "none",
+	"outputs": [{
+		"name": "output",
+		"datatype": "aizoo.tensor",
+		"description": "The output tensor."
+	}],
+	"inputs": [{
+			"name": "input",
+			"datatype": "aizoo.tensor",
+			"description": "The input tensor."
+		},
+
+		{
+			"name": "target",
+			"datatype": "aizoo.tensor",
+			"description": "The loss target."
+		}
+	],
+	"properties": {
+		"margin": {
+			"type": "aizoo.number",
+			"value": 1.0
+		},
+		"_description": "1. margin (float, optional): Has a default value of `1`."
+	},
+	"componentVersion": "1.0.0"
+}

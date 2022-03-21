@@ -1,0 +1,27 @@
+{
+    "name": "glu",
+    "description": " The gated linear unit. Computes: $$ GLU(a,b) = a \\otimes \\sigma(b) $$ . ",
+    "framework": "pytorch",
+    "frameworkVersion": "latest",
+    "outputs": [
+        {
+            "name": "output",
+            "datatype": "aizoo.tensor",
+            "description": "The output tensor."
+        }
+    ],
+    "inputs": [
+        {
+            "name": "input",
+            "datatype": "aizoo.tensor",
+            "description": "The input tensor."
+        },
+        {
+            "name": "dim",
+            "datatype": "aizoo.number",
+            "description": " Dimension on which to split the input. Default: -1.",
+            "value": -1
+        }
+    ],
+    "componentVersion": "1.0.0"
+}

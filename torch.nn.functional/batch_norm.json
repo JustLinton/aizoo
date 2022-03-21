@@ -1,0 +1,55 @@
+{
+    "name": "softshrink",
+    "description": "Applies Batch Normalization for each channel across a batch of data.",
+    "framework": "pytorch",
+    "frameworkVersion": "latest",
+    "outputs": [
+        {
+            "name": "output",
+            "datatype": "aizoo.tensor",
+            "description": "The output tensor."
+        }
+    ],
+    "inputs": [
+        {
+            "name": "input",
+            "datatype": "aizoo.tensor",
+            "description": "The input tensor."
+        },
+        {
+            "name": "running_mean",
+            "datatype": "aizoo.tensor"
+        },
+        {
+            "name": "running_var",
+            "datatype": "aizoo.tensor"
+        },
+        {
+            "name": "weight",
+            "datatype": "aizoo.tensor",
+            "description": "The weight tensor."
+        },
+        {
+            "name": "bias",
+            "datatype": "aizoo.tensor",
+            "description": "The bias tensor."
+        },
+        {
+            "name": "training",
+            "datatype": "aizoo.bool"
+        },
+        {
+            "name": "momentum",
+            "datatype": "aizoo.number",
+            "description": "The value used for the running_mean and running_var computation. Can be set to None for cumulative moving average (i.e. simple average). Default: 0.1.",
+            "value": 0.1
+        },
+        {
+            "name": "eps",
+            "datatype": "aizoo.number",
+            "description": "A value added to the denominator for numerical stability. Default: 1e-5.",
+            "value": 1e-5
+        }
+    ],
+    "componentVersion": "1.0.0"
+}

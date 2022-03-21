@@ -1,0 +1,28 @@
+{
+    "name": "elu_",
+    "description": "The inplace version of elu.",
+    "framework": "pytorch",
+    "frameworkVersion": "latest",
+    "example": " input = torch.randn(2) \r\n output = torch.nn.functional.elu_(input) ",
+    "outputs": [
+        {
+            "name": "output",
+            "datatype": "aizoo.tensor",
+            "description": "The output tensor."
+        }
+    ],
+    "inputs": [
+        {
+            "name": "input",
+            "datatype": "aizoo.tensor",
+            "description": "The input tensor."
+        },
+        {
+            "name": "alpha",
+            "datatype": "aizoo.number",
+            "description": "the α value for the ELU formulation.",
+            "value": 1.0
+        }
+    ],
+    "componentVersion": "1.0.0"
+}

@@ -1,0 +1,28 @@
+{
+    "name": "selu",
+    "description": "Applied element-wise, as: SELU(x)=scale∗(max(0,x)+min(0,α∗(exp(x)−1))).",
+    "framework": "pytorch",
+    "frameworkVersion": "latest",
+    "example": "  input = torch.randn(2) \r\noutput = torch.nn.functional.selu(input)",
+    "outputs": [
+        {
+            "name": "output",
+            "datatype": "aizoo.tensor",
+            "description": "The output tensor."
+        }
+    ],
+    "inputs": [
+        {
+            "name": "input",
+            "datatype": "aizoo.tensor",
+            "description": "The input tensor."
+        },
+        {
+            "name": "inplace",
+            "datatype": "aizoo.bool",
+            "description": "Do this inplace or not.",
+            "value": false
+        }
+    ],
+    "componentVersion": "1.0.0"
+}

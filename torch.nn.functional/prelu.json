@@ -1,0 +1,27 @@
+{
+    "name": "prelu",
+    "description": "PReLU(x)=max(0,x)+weight∗min(0,x) where weight is a learnable parameter.",
+    "framework": "pytorch",
+    "frameworkVersion": "latest",
+    "example": "  input = torch.randn(2) \r\n >>> output = torch.nn.functional.prelu(input) ",
+    "outputs": [
+        {
+            "name": "output",
+            "datatype": "aizoo.tensor",
+            "description": "The output tensor."
+        }
+    ],
+    "inputs": [
+        {
+            "name": "input",
+            "datatype": "aizoo.tensor",
+            "description": "The input tensor."
+        },
+        {
+            "name": "weight",
+            "datatype": "aizoo.tensor",
+            "description": "The weight tensor."
+        }
+    ],
+    "componentVersion": "1.0.0"
+}

@@ -1,0 +1,28 @@
+{
+    "name": "softmin",
+    "description": "Applies a softmin function. Note that Softmin(x)=Softmax(−x). See softmax definition for mathematical formula.",
+    "framework": "pytorch",
+    "frameworkVersion": "latest",
+    "example": " input = torch.randn(2, 3) \r\n output = torch.nn.functional.softmin(input) ",
+    "outputs": [
+        {
+            "name": "output",
+            "datatype": "aizoo.tensor",
+            "description": "The output tensor."
+        }
+    ],
+    "inputs": [
+        {
+            "name": "input",
+            "datatype": "aizoo.tensor",
+            "description": "The input tensor."
+        },
+        {
+            "name": "dim",
+            "datatype": "aizoo.number",
+            "description": "A dimension along which softmin will be computed (so every slice along dim will sum to 1).",
+            "value": null
+        }
+    ],
+    "componentVersion": "1.0.0"
+}

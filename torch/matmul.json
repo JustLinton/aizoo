@@ -1,0 +1,27 @@
+{
+    "name": "matmul",
+    "description": "Matrix product of two tensors.",
+    "framework": "pytorch",
+    "frameworkVersion": "latest",
+    "example": " tensor1 = torch.randn(3) \r\ntensor2 = torch.randn(3) \r\n>>> torch.nn.functional.matmul(tensor1, tensor2).size() ",
+    "outputs": [
+        {
+            "name": "output",
+            "datatype": "aizoo.tensor",
+            "description": "The output tensor."
+        }
+    ],
+    "inputs": [
+        {
+            "name": "input",
+            "datatype": "aizoo.tensor",
+            "description": "the first tensor to be multiplied."
+        },
+        {
+            "name": "other",
+            "datatype": "aizoo.tensor",
+            "description": "the second tensor to be multiplied."
+        }
+    ],
+    "componentVersion": "1.0.0"
+}

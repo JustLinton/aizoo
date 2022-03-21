@@ -1,0 +1,22 @@
+{
+    "name": "box_area",
+    "description": "Computes the area of a set of bounding boxes, which are specified by their (x1, y1, x2, y2) coordinates.",
+    "framework": "pytorch",
+    "frameworkVersion": "latest",
+    "example": "",
+    "outputs": [
+        {
+            "name": "output",
+            "datatype": "aizoo.tensor",
+            "description": "The output tensor."
+        }
+    ],
+    "inputs": [
+        {
+            "name": "boxes",
+            "datatype": "aizoo.tensor",
+            "description": "(Tensor[N, 4]) – boxes where NMS will be performed. They are expected to be in (x1, y1, x2, y2) format with 0 <= x1 < x2 and 0 <= y1 < y2."
+        }
+    ],
+    "componentVersion": "1.0.0"
+}

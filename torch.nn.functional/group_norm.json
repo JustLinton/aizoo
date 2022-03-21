@@ -1,0 +1,42 @@
+{
+    "name": "group_norm",
+    "description": "Applies Group Normalization for last certain number of dimensions..",
+    "framework": "pytorch",
+    "frameworkVersion": "latest",
+    "outputs": [
+        {
+            "name": "output",
+            "datatype": "aizoo.tensor",
+            "description": "The output tensor."
+        }
+    ],
+    "inputs": [
+        {
+            "name": "input",
+            "datatype": "aizoo.tensor",
+            "description": "The input tensor.  Unnormalized log probabilities."
+        },
+        {
+            "name": "num_groups",
+            "datatype": "aizoo.number",
+            "description": "number of groups to separate the channels into."
+        },
+        {
+            "name": "weight",
+            "datatype": "aizoo.tensor",
+            "value": null
+        },
+        {
+            "name": "bias",
+            "datatype": "aizoo.tensor",
+            "value": null
+        },
+        {
+            "name": "eps",
+            "datatype": "aizoo.number",
+            "description": "a value added to the denominator for numerical stability. Default: 1e-5.",
+            "value": 1e-5
+        }
+    ],
+    "componentVersion": "1.0.0"
+}

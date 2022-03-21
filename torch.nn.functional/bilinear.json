@@ -1,0 +1,36 @@
+{
+    "name": "bilinear",
+    "description": "Applies a bilinear transformation to the incoming data: $$ y = x_1^T A x_2 + b.$$",
+    "framework": "pytorch",
+    "frameworkVersion": "latest",
+    "outputs": [
+        {
+            "name": "output",
+            "datatype": "aizoo.tensor",
+            "description": "The output tensor."
+        }
+    ],
+    "inputs": [
+        {
+            "name": "input1",
+            "datatype": "aizoo.tensor",
+            "description":  "The input tensor 1."
+        },
+        {
+            "name": "input2",
+            "datatype": "aizoo.tensor",
+            "description":  "The input tensor 2."
+        },
+        {
+            "name": "weight",
+            "datatype": "aizoo.tensor"
+        },
+        {
+            "name": "bias",
+            "datatype": "aizoo.tensor",
+            "value": null
+        }
+       
+    ],
+    "componentVersion": "1.0.0"
+}

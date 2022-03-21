@@ -1,0 +1,22 @@
+{
+    "name": "logsigmoid",
+    "description": "The gated linear unit. Computes:GLU(a,b)=a⊗σ(b).",
+    "framework": "pytorch",
+    "frameworkVersion": "latest",
+    "example": "",
+    "outputs": [
+        {
+            "name": "output",
+            "datatype": "aizoo.tensor",
+            "description": "The output tensor."
+        }
+    ],
+    "inputs": [
+        {
+            "name": "input",
+            "datatype": "aizoo.tensor",
+            "description": "The input tensor."
+        }
+    ],
+    "componentVersion": "1.0.0"
+}

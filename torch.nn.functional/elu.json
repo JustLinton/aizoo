@@ -1,0 +1,34 @@
+{
+    "name": "elu",
+    "description": "Applies element-wise, ELU(x)=max(0,x)+min(0,α∗(exp(x)−1)).",
+    "framework": "pytorch",
+    "frameworkVersion": "latest",
+    "example": "input = torch.randn(2) \r\n >>> output = torch.nn.functional.relu6(input) ",
+    "outputs": [
+        {
+            "name": "output",
+            "datatype": "aizoo.tensor",
+            "description": "The output tensor."
+        }
+    ],
+    "inputs": [
+        {
+            "name": "input",
+            "datatype": "aizoo.tensor",
+            "description": "The input tensor."
+        },
+        {
+            "name": "alpha",
+            "datatype": "aizoo.number",
+            "description": "the α value for the ELU formulation.",
+            "value": 1.0
+        },
+        {
+            "name": "inplace",
+            "datatype": "aizoo.bool",
+            "description": "can optionally do the operation in-place",
+            "value": false
+        }
+    ],
+    "componentVersion": "1.0.0"
+}

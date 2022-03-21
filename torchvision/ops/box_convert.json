@@ -1,0 +1,32 @@
+{
+    "name": "box_convert",
+    "description": "Converts boxes from given in_fmt to out_fmt.",
+    "framework": "pytorch",
+    "frameworkVersion": "latest",
+    "example": "",
+    "outputs": [
+        {
+            "name": "output",
+            "datatype": "aizoo.tensor",
+            "description": "The output tensor."
+        }
+    ],
+    "inputs": [
+        {
+            "name": "boxes",
+            "datatype": "aizoo.tensor",
+            "description": "(Tensor[N, 4]) – boxes which will be converted."
+        },
+        {
+            "name": "in_fmt",
+            "datatype": "aizoo.string",
+            "description": "Input format of given boxes. Supported formats are [‘xyxy’, ‘xywh’, ‘cxcywh’]."
+        },
+        {
+            "name": "out_fmt",
+            "datatype": "aizoo.string",
+            "description": "Output format of given boxes. Supported formats are [‘xyxy’, ‘xywh’, ‘cxcywh’]."
+        }
+    ],
+    "componentVersion": "1.0.0"
+}

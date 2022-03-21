@@ -1,0 +1,50 @@
+{
+    "name": "Hardtanh",
+    "description": "Applies the HardTanh function element-wise.",
+    "framework": "pytorch",
+    "frameworkVersion": "latest",
+    "example": "m = nn.Hardtanh(-2, 2) \r\ninput = torch.randn(2) \r\noutput = m(input)",
+    "outputs": [
+        {
+            "name": "output",
+            "datatype": "aizoo.tensor",
+            "description": "The output tensor."
+        }
+
+    ],
+    "inputs": [
+        {
+            "name": "input",
+            "datatype": "aizoo.tensor",
+            "description": "The input tensor."
+        }
+    ],
+	"properties": {
+        "min_val": {
+            "type": "aizoo.number",
+            "value": -1.0,
+            "defaultType":"aizoo.number"
+        },
+        "max_val": {
+            "type": "aizoo.number",
+            "value": 1.0,
+            "defaultType":"aizoo.number"
+        },
+        "inplace": {
+            "type": "aizoo.bool",
+            "value": false,
+            "defaultType":"aizoo.bool"
+        },
+        "min_value": {
+            "type": "None",
+            "defaultType":"aizoo.unknown"
+        },
+        "max_value": {
+         "type": "None",
+            "defaultType":"aizoo.unknown"
+        },
+        
+      "_description": "1.inplace: can optionally do the operation in-place. Default: ``False``.\r\n 2.min_val: minimum value of the linear region range. Default: -1 \r\n 3. max_val: maximum value of the linear region range. Default: 1"
+    },
+    "componentVersion": "1.0.1"
+}

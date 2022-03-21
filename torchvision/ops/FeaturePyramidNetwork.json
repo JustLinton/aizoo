@@ -1,0 +1,37 @@
+{
+    "name": "FeaturePyramidNetwork",
+    "description": "Module that adds a FPN from on top of a set of feature maps. This is based on “Feature Pyramid Network for Object Detection”.",
+    "framework": "pytorch",
+    "frameworkVersion": "latest",
+    "example": "",
+    "outputs": [
+        {
+            "name": "output",
+            "datatype": "aizoo.tensor",
+            "description": "the output tensor"
+        }
+    ],
+    "inputs": [
+        {
+            "name": "x",
+            "datatype": "aizoo.dict",
+            "description": "The x dict."
+        }
+    ],
+	"properties": {
+		"in_channels_list": {
+            "defaultType": "aizoo.unknown",
+            "type": "None"
+        },
+		"out_channels": {
+            "defaultType": "aizoo.number",
+            "type": "aizoo.number"
+        },
+        "extra_blocks": {
+            "defaultType": "aizoo.unknown",
+            "type": "None"
+        },
+        "_description": "in_channels_list (list[int]) – number of channels for each feature map that is passed to the module\nout_channels (int) – number of channels of the FPN representation\nextra_blocks (ExtraFPNBlock or None) – if provided, extra operations will be performed. It is expected to take the fpn features, the original features and the names of the original features as input, and returns a new list of feature maps and their corresponding names."
+    },
+    "componentVersion": "1.0.0"
+}

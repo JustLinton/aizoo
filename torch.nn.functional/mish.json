@@ -1,0 +1,28 @@
+{
+    "name": "mish",
+    "description": "Applies the Mish function, element-wise. Mish: A Self Regularized Non-Monotonic Neural Activation Function.Mish(x)=x∗Tanh(Softplus(x)).",
+    "framework": "pytorch",
+    "frameworkVersion": "latest",
+    "example": " input = torch.randn(2) \r\noutput = torch.nn.functional.mish(input)",
+    "outputs": [
+        {
+            "name": "output",
+            "datatype": "aizoo.tensor",
+            "description": "The output tensor."
+        }
+    ],
+    "inputs": [
+        {
+            "name": "input",
+            "datatype": "aizoo.tensor",
+            "description": "The input tensor."
+        },
+        {
+            "name": "inplace",
+            "datatype": "aizoo.bool",
+            "description": "Can optionally do the operation in-place. Default: False.",
+             "value": false
+        }
+    ],
+    "componentVersion": "1.0.0"
+}

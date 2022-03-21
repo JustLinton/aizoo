@@ -1,0 +1,38 @@
+{
+    "name": "PSRoIPool",
+    "description": "Performs Position-Sensitive Region of Interest (RoI) Pool operator described in R-FCN.",
+    "framework": "pytorch",
+    "frameworkVersion": "latest",
+    "example": "",
+    "outputs": [
+        {
+            "name": "output",
+            "datatype": "aizoo.tensor",
+            "description": "the output tensor"
+        }
+    ],
+    "inputs": [
+        {
+            "name": "input",
+            "datatype": "aizoo.tensor",
+            "description": "The input tensor, i.e. a batch with N elements. Each element contains C feature maps of dimensions H x W. If the tensor is quantized, we expect a batch size of N == 1."
+        },
+        {
+            "name": "rois",
+            "datatype": "aizoo.tensor",
+            "description": "The rois tensor."
+        }
+    ],
+	"properties": {
+		"output_size": {
+            "defaultType": "aizoo.array",
+            "type": "aizoo.array"
+        },
+		"spatial_scale": {
+            "defaultType": "aizoo.number",
+            "type": "aizoo.number"
+        },
+        "_description": "output_size (int or Tuple[int, int]) – the size of the output (in bins or pixels) after the pooling is performed, as (height, width). \n spatial_scale (float) – a scaling factor that maps the input coordinates to the box coordinates. Default: 1.0."
+    },
+    "componentVersion": "1.0.0"
+}

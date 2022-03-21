@@ -1,0 +1,39 @@
+{
+    "name": "rrelu_",
+    "description": "Randomized leaky ReLU. In-place version.",
+    "framework": "pytorch",
+    "frameworkVersion": "latest",
+    "outputs": [
+        {
+            "name": "output",
+            "datatype": "aizoo.tensor",
+            "description": "The output tensor."
+        }
+    ],
+    "inputs": [
+        {
+            "name": "input",
+            "datatype": "aizoo.tensor",
+            "description": "The input tensor."
+        },
+        {
+            "name": "lower",
+            "datatype": "aizoo.number",
+            "description": " lower bound of the uniform distribution. Default: 1/8.",
+            "value": 0.125
+        },
+        {
+            "name": "upper",
+            "datatype": "aizoo.number",
+            "description": "upper bound of the uniform distribution. Default:1/3.",
+            "value": 0.3333333333333333
+        },
+        {
+            "name": "training",
+            "datatype": "aizoo.bool",
+            "description": "",
+            "value": false
+        }
+    ],
+    "componentVersion": "1.0.0"
+}

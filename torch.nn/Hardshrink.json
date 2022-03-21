@@ -1,0 +1,28 @@
+{
+	"name": "Hardshrink",
+	"description": "Applies the hard shrinkage function.",
+	"framework": "pytorch",
+	"frameworkVersion": "latest",
+	"example": "m = nn.Hardshrink() \r\ninput = torch.randn(2) \r\noutput = m(input)",
+	"outputs": [{
+			"name": "output",
+			"datatype": "aizoo.tensor",
+			"description": "The output tensor."
+		}
+
+	],
+	"inputs": [{
+		"name": "input",
+		"datatype": "aizoo.tensor",
+		"description": "The input tensor."
+	}],
+	"properties": {
+		"lambd": {
+			"type": "aizoo.number",
+			"value": 0.5,
+            "defaultType":"aizoo.number"
+		},
+		"_description": "lambd: the :math: lambda value for the Hardshrink formulation. Default: 0.5."
+	},
+	"componentVersion": "1.0.2"
+}

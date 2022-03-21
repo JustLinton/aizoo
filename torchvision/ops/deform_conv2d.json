@@ -1,0 +1,55 @@
+{
+    "name": "deform_conv2d",
+    "description": "Performs Deformable Convolution v2, described in Deformable ConvNets v2: More Deformable, Better Results if mask is not None and Performs Deformable Convolution, described in Deformable Convolutional Networks if mask is None.",
+    "framework": "pytorch",
+    "frameworkVersion": "latest",
+    "example": "",
+    "outputs": [
+        {
+            "name": "output",
+            "datatype": "aizoo.tensor",
+            "description": "The output tensor."
+        }
+    ],
+    "inputs": [
+        {
+            "name": "input",
+            "datatype": "aizoo.tensor",
+            "description": "(Tensor[batch_size, in_channels, in_height, in_width]) – input tensor"
+        },
+        {
+            "name": "output",
+            "datatype": "aizoo.tensor",
+            "description": "(Tuple[height, width]) – size of the image."
+        },
+        {
+            "name": "weight",
+            "datatype": "aizoo.tensor",
+            "description": " (Tensor[batch_size, 2 * offset_groups * kernel_height * kernel_width, out_height, out_width]) – offsets to be applied for each position in the convolution kernel."
+        },
+        {
+            "name": "bias",
+            "datatype": "aizoo.tensor",
+            "description": "(Tensor[out_channels]) – optional bias of shape (out_channels,). Default: None."
+        },
+        {
+            "name": "stride",
+            "datatype": "aizoo.number",
+            "description": "(int or Tuple[int, int]) – distance between convolution centers. Default: 1.",
+            "value:":1
+        },
+        {
+            "name": "padding",
+            "datatype": "aizoo.number",
+            "description": "(int or Tuple[int, int]) – height/width of padding of zeroes around each image. Default: 0.",
+            "value:":0
+        },
+        {
+            "name": "dilation",
+            "datatype": "aizoo.number",
+            "description": "(int or Tuple[int, int]) – the spacing between kernel elements. Default: 1.",
+            "value:":1
+        }
+    ],
+    "componentVersion": "1.0.0"
+}

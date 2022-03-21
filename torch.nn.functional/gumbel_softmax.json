@@ -1,0 +1,45 @@
+{
+    "name": "gumbel_softmax",
+    "description": "Samples from the Gumbel-Softmax distribution and optionally discretizes.",
+    "framework": "pytorch",
+    "frameworkVersion": "latest",
+    "outputs": [
+        {
+            "name": "output",
+            "datatype": "aizoo.tensor",
+            "description": "The output tensor."
+        }
+    ],
+    "inputs": [
+        {
+            "name": "input",
+            "datatype": "aizoo.tensor",
+            "description": "The input tensor.  Unnormalized log probabilities."
+        },
+        {
+            "name": "tau",
+            "datatype": "aizoo.number",
+            "description": "non-negative scalar temperature. Default: 1.",
+            "value": 1
+        },
+        {
+            "name": "hard",
+            "datatype": "aizoo.bool",
+            "description": "if True, the returned samples will be discretized as one-hot vectors, but will be differentiated as if it is the soft sample in autograd.",
+            "value": false
+        },
+        {
+            "name": "eps",
+            "datatype": "aizoo.number",
+            "description": "",
+            "value": 1e-10
+        },
+        {
+            "name": "dim",
+            "datatype": "aizoo.number",
+            "description": "A dimension along which softmax will be computed. Default: -1.",
+            "value": -1
+        }
+    ],
+    "componentVersion": "1.0.0"
+}

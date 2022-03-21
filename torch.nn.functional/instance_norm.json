@@ -1,0 +1,59 @@
+{
+    "name": "instance_norm",
+    "description": "Applies Instance Normalization for each channel in each data sample in a batch.",
+    "framework": "pytorch",
+    "frameworkVersion": "latest",
+    "outputs": [
+        {
+            "name": "output",
+            "datatype": "aizoo.tensor",
+            "description": "The output tensor."
+        }
+    ],
+    "inputs": [
+        {
+            "name": "input",
+            "datatype": "aizoo.tensor",
+            "description": "The input tensor.  Unnormalized log probabilities."
+        },
+        {
+            "name": "running_mean",
+            "datatype": "aizoo.tensor",
+            "value": null
+        },
+        {
+            "name": "running_var",
+            "datatype": "aizoo.tensor",
+            "value": null
+        },
+        {
+            "name": "weight",
+            "datatype": "aizoo.tensor",
+            "value": null
+        },
+        {
+            "name": "bias",
+            "datatype": "aizoo.tensor",
+            "value": null
+        },
+        {
+            "name": "use_input_stats",
+            "datatype": "aizoo.bool",
+            "description": "",
+            "value": false
+        },
+        {
+            "name": "momentum",
+            "datatype": "aizoo.number",
+            "description": "the value used for the running_mean and running_var computation. Default: 0.1.",
+            "value": 0.1
+        },
+        {
+            "name": "eps",
+            "datatype": "aizoo.number",
+            "description": "a value added to the denominator for numerical stability. Default: 1e-5.",
+            "value": 1e-5
+        }
+    ],
+    "componentVersion": "1.0.0"
+}

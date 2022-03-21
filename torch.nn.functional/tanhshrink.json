@@ -1,0 +1,22 @@
+{
+    "name": "tanhshrink",
+    "description": "Applies element-wise, Tanhshrink(x)=x−Tanh(x).",
+    "framework": "pytorch",
+    "frameworkVersion": "latest",
+    "example": " input = torch.randn(2) \r\n output = torch.nn.functional.tanhshrink(input)",
+    "outputs": [
+        {
+            "name": "output",
+            "datatype": "aizoo.tensor",
+            "description": "The output tensor."
+        }
+    ],
+    "inputs": [
+        {
+            "name": "input",
+            "datatype": "aizoo.tensor",
+            "description": "The input tensor."
+        }
+    ],
+    "componentVersion": "1.0.0"
+}

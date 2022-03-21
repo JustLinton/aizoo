@@ -1,0 +1,44 @@
+{
+    "name": "RetinaNet",
+    "description": "Constructs a RetinaNet model with a ResNet-50-FPN backbone.",
+    "framework": "pytorch",
+    "frameworkVersion": "latest",
+    "example": "",
+    "outputs": [
+        {
+            "name": "output",
+            "datatype": "aizoo.unknown",
+            "description": "The output list."
+        }
+    ],
+    "inputs": [
+        {
+            "name": "images",
+            "datatype": "aizoo.unknown",
+            "description": "the input images list."
+        },
+        {
+            "name": "targets",
+            "datatype": "aizoo.unknown",
+            "description": "the input targets dict list."
+        }
+    ],
+	"properties": {
+		"pretrained": {
+            "defaultType": "aizoo.bool",
+            "type": "aizoo.bool",
+            "value": false
+        },
+		"progress": {
+            "defaultType": "aizoo.bool",
+            "type": "aizoo.bool",
+            "value": true
+        },
+        "num_classes": {
+            "defaultType": "aizoo.number",
+            "type": "aizoo.number",
+            "value": 91
+        }
+    },
+    "componentVersion": "1.0.0"
+}

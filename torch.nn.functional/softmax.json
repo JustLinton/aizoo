@@ -1,0 +1,28 @@
+{
+    "name": "softmax",
+    "description": "Applies a softmax function. It is applied to all slices along dim, and will re-scale them so that the elements lie in the range [0, 1] and sum to 1.",
+    "framework": "pytorch",
+    "frameworkVersion": "latest",
+    "example": " input = torch.randn(2, 3) \r\n output = torch.nn.functional.softmax(input) ",
+    "outputs": [
+        {
+            "name": "output",
+            "datatype": "aizoo.tensor",
+            "description": "The output tensor."
+        }
+    ],
+    "inputs": [
+        {
+            "name": "input",
+            "datatype": "aizoo.tensor",
+            "description": "The input tensor."
+        },
+        {
+            "name": "dim",
+            "datatype": "aizoo.number",
+            "description": "A dimension along which softmin will be computed (so every slice along dim will sum to 1).",
+            "value": null
+        }
+    ],
+    "componentVersion": "1.0.0"
+}

@@ -1,0 +1,27 @@
+{
+    "name": "generalized_box_iou",
+    "description": "Return generalized intersection-over-union (Jaccard index) between two sets of boxes. Both sets of boxes are expected to be in (x1, y1, x2, y2) format with 0 <= x1 < x2 and 0 <= y1 < y2.",
+    "framework": "pytorch",
+    "frameworkVersion": "latest",
+    "example": "",
+    "outputs": [
+        {
+            "name": "output",
+            "datatype": "aizoo.tensor",
+            "description": "The output tensor."
+        }
+    ],
+    "inputs": [
+        {
+            "name": "boxes1",
+            "datatype": "aizoo.tensor",
+            "description": "(Tensor[N, 4]) – first set of boxes。"
+        },
+        {
+            "name": "boxes2",
+            "datatype": "aizoo.tensor",
+            "description": "(Tensor[N, 4]) – second set of boxes。"
+        }
+    ],
+    "componentVersion": "1.0.0"
+}

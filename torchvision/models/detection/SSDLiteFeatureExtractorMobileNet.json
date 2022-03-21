@@ -1,0 +1,44 @@
+{
+    "name": "SSDLiteFeatureExtractorMobileNet",
+    "description": "Constructs an SSDlite model with input size 320x320 and a MobileNetV3 Large backbone, as described at “Searching for MobileNetV3” and “MobileNetV2: Inverted Residuals and Linear Bottlenecks”.",
+    "framework": "pytorch",
+    "frameworkVersion": "latest",
+    "example": "",
+    "outputs": [
+        {
+            "name": "output",
+            "datatype": "aizoo.dict",
+            "description": "The output dict."
+        }
+    ],
+    "inputs": [
+        {
+            "name": "images",
+            "datatype": "aizoo.tensor",
+            "description": "the input x."
+        }
+    ],
+	"properties": {
+		"pretrained": {
+            "defaultType": "aizoo.bool",
+            "type": "aizoo.bool",
+            "value": false
+        },
+		"progress": {
+            "defaultType": "aizoo.bool",
+            "type": "aizoo.bool",
+            "value": true
+        },
+        "num_classes": {
+            "defaultType": "aizoo.number",
+            "type": "aizoo.number",
+            "value": 91
+        },
+        "pretrained_backbone": {
+            "defaultType": "aizoo.bool",
+            "type": "aizoo.bool",
+            "value": true
+        }
+    },
+    "componentVersion": "1.0.0"
+}

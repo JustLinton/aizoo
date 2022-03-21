@@ -1,0 +1,57 @@
+{
+    "name": "MultiScaleRoIAlign",
+    "description": "Multi-scale RoIAlign pooling, which is useful for detection with or without FPN.",
+    "framework": "pytorch",
+    "frameworkVersion": "latest",
+    "example": "",
+    "outputs": [
+        {
+            "name": "output",
+            "datatype": "aizoo.tensor",
+            "description": "the output tensor"
+        }
+    ],
+    "inputs": [
+        {
+            "name": "x",
+            "datatype": "aizoo.dict",
+            "description": "The x dict."
+        },
+        {
+            "name": "boxes",
+            "datatype": "aizoo.unknown",
+            "description": "The boxes list."
+        },
+        {
+            "name": "image_shapes",
+            "datatype": "aizoo.unknown",
+            "description": "The image_shapes list."
+        }
+    ],
+	"properties": {
+		"featmap_names": {
+            "defaultType": "aizoo.unknown",
+            "type": "None"
+        },
+		"output_size": {
+            "defaultType": "aizoo.unknown",
+            "type": "None"
+        },
+        "sampling_ratio": {
+            "defaultType": "aizoo.number",
+            "type": "aizoo.number"
+        },
+        "canonical_scale": {
+            "defaultType": "aizoo.number",
+            "type": "aizoo.number",
+            "value": 224
+        },
+        "canonical_level": {
+            "defaultType": "aizoo.number",
+            "type": "aizoo.number",
+            "value": 4
+        },
+        "_description": "featmap_names (List[str]) – the names of the feature maps that will be used for the pooling.\noutput_size (List[Tuple[int, int]] or List[int]) – output size for the pooled region\nsampling_ratio (int) – sampling ratio for ROIAlign\ncanonical_scale (int, optional) – canonical_scale for LevelMapper\ncanonical_level (int, optional) – canonical_level for LevelMapper."
+    },
+    "componentVersion": "1.0.0"
+}

@@ -1,0 +1,44 @@
+{
+    "name": "DeepLabV3",
+    "description": "Constructs a DeepLabV3 model with a provided backbone.",
+    "framework": "pytorch",
+    "frameworkVersion": "latest",
+    "example": "",
+    "outputs": [
+        {
+            "name": "output",
+            "datatype": "aizoo.unknown",
+            "description": "The result."
+        }
+    ],
+    "inputs": [
+        {
+            "name": "x",
+            "datatype": "aizoo.tensor",
+            "description": "the input tensor"
+        }
+    ],
+	"properties": {
+        "model_name": {
+            "defaultType": "aizoo.string",
+            "type": "None"
+        },
+		"pretrained": {
+            "defaultType": "aizoo.bool",
+            "type": "aizoo.bool",
+            "value": false
+        },
+		"progress": {
+            "defaultType": "aizoo.bool",
+            "type": "aizoo.bool",
+            "value": true
+        },
+        "num_classes": {
+            "defaultType": "aizoo.number",
+            "type": "aizoo.number",
+            "value": 21
+        },
+      "_description": "pretrained (bool) – If True, returns a model pre-trained on COCO train2017 which contains the same classes as Pascal VOC\nprogress (bool) – If True, displays a progress bar of the download to stderr\nnum_classes (int) – number of output classes of the model (including the background)\naux_loss (bool) – If True, it uses an auxiliary loss"
+    },
+    "componentVersion": "1.0.0"
+}

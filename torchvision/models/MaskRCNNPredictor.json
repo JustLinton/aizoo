@@ -1,0 +1,49 @@
+{
+    "name": "MaskRCNNPredictor",
+    "description": "Constructs a Mask R-CNN model with a ResNet-50-FPN backbone.",
+    "framework": "pytorch",
+    "frameworkVersion": "latest",
+    "example": "",
+    "outputs": [
+        {
+            "name": "output",
+            "datatype": "aizoo.unknown",
+            "description": "The result."
+        }
+    ],
+    "inputs": [
+        {
+            "name": "images",
+            "datatype": "aizoo.unknown",
+            "description": "The input images tensor."
+        }
+    ],
+	"properties": {
+		"pretrained": {
+            "defaultType": "aizoo.bool",
+            "type": "aizoo.bool",
+            "value": false
+        },
+		"progress": {
+            "defaultType": "aizoo.bool",
+            "type": "aizoo.bool",
+            "value": true
+        },
+        "num_classes": {
+            "defaultType": "aizoo.number",
+            "type": "aizoo.number",
+            "value": 91
+        },
+        "pretrained_backbone": {
+            "defaultType": "aizoo.bool",
+            "type": "aizoo.bool",
+            "value": true
+        },
+        "trainable_backbone_layers": {
+            "defaultType": "aizoo.number",
+            "type": "aizoo.number"
+        },
+      "_description": "pretrained (bool) – If True, returns a model pre-trained on COCO train2017\nprogress (bool) – If True, displays a progress bar of the download to stderr\nnum_classes (int) – number of output classes of the model (including the background)\npretrained_backbone (bool) – If True, returns a model with backbone pre-trained on Imagenet\ntrainable_backbone_layers (int) – number of trainable (not frozen) resnet layers starting from final block. Valid values are between 0 and 5, with 5 meaning all backbone layers are trainable."
+    },
+    "componentVersion": "1.0.0"
+}

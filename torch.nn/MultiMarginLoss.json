@@ -1,0 +1,43 @@
+{
+	"name": "MultiMarginLoss",
+	"description": "CCreates a criterion that optimizes a multi-class classification hinge loss (margin-based loss) between input xx (a 2D mini-batch Tensor) and output yy (which is a 1D tensor of target class indices.",
+	"framework": "pytorch",
+	"frameworkVersion": "latest",
+	"example": "  loss = nn.MultiMarginLoss() \r\n x = torch.tensor([[0.1, 0.2, 0.4, 0.8]]) \r\n y = torch.tensor([3]) \r\n loss(x, y) \r\n 0.25 * ((1-(0.8-0.1)) + (1-(0.8-0.2)) + (1-(0.8-0.4))) \r\n tensor(0.3250)",
+	"outputs": [{
+			"name": "output",
+			"datatype": "aizoo.tensor",
+			"description": "The output tensor."
+		}
+
+	],
+	"inputs": [
+	{
+		"name": "input",
+		"datatype": "aizoo.tensor",
+		"description": "The input tensor."
+	},
+	
+	{
+		"name": "target",
+		"datatype": "aizoo.tensor",
+		"description": "The loss target."
+	}
+	
+	],
+	"properties": {
+		"margin": {
+			"type": "aizoo.number",
+			"value": 1.0,
+            "defaultType":"aizoo.number"
+		},
+		"p": {
+			"type": "aizoo.number",
+			"value": 1,
+            "defaultType":"aizoo.number"
+		},
+		
+		"_description": "1. p (int, optional): Has a default value of :math:`1`. :math:`1` and :math:`2`\r\n 2. margin (float, optional): Has a default value of :math:`1`."
+	},
+	"componentVersion": "1.0.0"
+}

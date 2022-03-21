@@ -1,0 +1,39 @@
+{
+    "name": "normalize",
+    "description": "Applies local response normalization over an input signal composed of several input planes, where channels occupy the second dimension. Applies normalization across channels.",
+    "framework": "pytorch",
+    "frameworkVersion": "latest",
+    "outputs": [
+        {
+            "name": "output",
+            "datatype": "aizoo.tensor",
+            "description": "The output tensor."
+        }
+    ],
+    "inputs": [
+        {
+            "name": "input",
+            "datatype": "aizoo.tensor",
+            "description":  "The input tensor."
+        },
+        {
+            "name": "p",
+            "datatype": "aizoo.number",
+            "description": " the exponent value in the norm formulation. Default: 2.",
+            "value": 2.0
+        },
+        {
+            "name": "dim",
+            "datatype": "aizoo.number",
+            "description": "the dimension to reduce. Default: 1.",
+            "value": 1
+        },
+        {
+            "name": "eps",
+            "datatype": "aizoo.number",
+            "description": "small value to avoid division by zero. Default: 1e-12.",
+            "value": 1e-12
+        }
+    ],
+    "componentVersion": "1.0.0"
+}

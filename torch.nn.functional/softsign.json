@@ -1,0 +1,22 @@
+    {
+    "name": "softsign",
+    "description": "Applies element-wise, softsign function.",
+    "framework": "pytorch",
+    "frameworkVersion": "latest",
+    "example": "input = torch.randn(2) \r\noutput = torch.nn.functional.softsign(input)",
+    "outputs": [
+        {
+            "name": "output",
+            "datatype": "aizoo.tensor",
+            "description": "The output tensor."
+        }
+    ],
+    "inputs": [
+        {
+            "name": "input",
+            "datatype": "aizoo.tensor",
+            "description": "The input tensor."
+        }
+    ],
+    "componentVersion": "1.0.0"
+}

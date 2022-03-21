@@ -1,0 +1,21 @@
+{
+    "name": "frac",
+    "description": "Computes the fractional portion of each element in input.",
+    "framework": "pytorch",
+    "frameworkVersion": "latest",
+    "outputs": [
+        {
+            "name": "output",
+            "datatype": "aizoo.tensor",
+            "description": "The output tensor."
+        }
+    ],
+    "inputs": [
+        {
+            "name": "input",
+            "datatype": "aizoo.tensor",
+            "description": "The input tensor."
+        }
+    ],
+    "componentVersion": "1.0.0"
+}

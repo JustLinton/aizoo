@@ -1,0 +1,22 @@
+{
+    "name": "norm",
+    "description": "Returns the matrix norm or vector norm of a given tensor.",
+    "framework": "pytorch",
+    "frameworkVersion": "latest",
+    "example": " a = torch.arange(9, dtype= torch.float) - 4 \r\n b = a.reshape((3, 3)) \r\n torch.norm(a) \r\n tensor(7.7460)",
+    "outputs": [
+        {
+            "name": "output",
+            "datatype": "aizoo.tensor",
+            "description": "The output tensor."
+        }
+    ],
+    "inputs": [
+        {
+            "name": "input",
+            "datatype": "aizoo.tensor",
+            "description": "The input tensor."
+        }
+    ],
+    "componentVersion": "1.0.0"
+}

@@ -1,0 +1,34 @@
+{
+    "name": "softplus",
+    "description": "Applies element-wise, the softplus function.",
+    "framework": "pytorch",
+    "frameworkVersion": "latest",
+    "example": "  input = torch.randn(2) \r\n  output = torch.nn.functional.softplus(input) ",
+    "outputs": [
+        {
+            "name": "output",
+            "datatype": "aizoo.tensor",
+            "description": "The output tensor."
+        }
+    ],
+    "inputs": [
+        {
+            "name": "input",
+            "datatype": "aizoo.tensor",
+            "description": "The input tensor."
+        },
+        {
+            "name": "beta",
+            "datatype": "aizoo.number",
+            "description": " the β value for the Softplus formulation. Default: 1.",
+            "value": 1
+        },
+        {
+            "name": "threshold",
+            "datatype": "aizoo.number",
+            "description": "values above this revert to a linear function. Default: 20.",
+            "value": 20
+        }
+    ],
+    "componentVersion": "1.0.0"
+}

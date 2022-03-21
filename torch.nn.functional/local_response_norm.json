@@ -1,0 +1,45 @@
+{
+    "name": "local_response_norm",
+    "description": "Applies local response normalization over an input signal composed of several input planes, where channels occupy the second dimension. Applies normalization across channels.",
+    "framework": "pytorch",
+    "frameworkVersion": "latest",
+    "outputs": [
+        {
+            "name": "output",
+            "datatype": "aizoo.tensor",
+            "description": "The output tensor."
+        }
+    ],
+    "inputs": [
+        {
+            "name": "input",
+            "datatype": "aizoo.tensor",
+            "description": "The input tensor.  Unnormalized log probabilities."
+        },
+        {
+            "name": "size",
+            "datatype": "aizoo.number",
+            "description": "amount of neighbouring channels used for normalization. Default: 1.",
+            "value": 1
+        },
+        {
+            "name": "alpha",
+            "datatype": "aizoo.number",
+            "description": "multiplicative factor. Default: 0.0001.",
+            "value": 0.75
+        },
+        {
+            "name": "beta",
+            "datatype": "aizoo.number",
+            "description": "exponent. Default: 0.75.",
+            "value": 0.75
+        },
+        {
+            "name": "k",
+            "datatype": "aizoo.number",
+            "description": "additive factor. Default: 1.0.",
+            "value": 1.0
+        }
+    ],
+    "componentVersion": "1.0.0"
+}

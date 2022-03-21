@@ -1,0 +1,27 @@
+{
+    "name": "clip_boxes_to_image",
+    "description": "Clip boxes so that they lie inside an image of size size.",
+    "framework": "pytorch",
+    "frameworkVersion": "latest",
+    "example": "",
+    "outputs": [
+        {
+            "name": "output",
+            "datatype": "aizoo.tensor",
+            "description": "The output tensor."
+        }
+    ],
+    "inputs": [
+        {
+            "name": "boxes",
+            "datatype": "aizoo.tensor",
+            "description": "(Tensor[N, 4]) – boxes in (x1, y1, x2, y2) format with 0 <= x1 < x2 and 0 <= y1 < y2."
+        },
+        {
+            "name": "size",
+            "datatype": "aizoo.tuple",
+            "description": "(Tuple[height, width]) – size of the image."
+        }
+    ],
+    "componentVersion": "1.0.0"
+}

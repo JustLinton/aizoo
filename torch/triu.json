@@ -1,0 +1,28 @@
+{
+    "name": "triu",
+    "description": "Returns the upper triangular part of a matrix (2-D tensor) or batch of matrices input, the other elements of the result tensor out are set to 0.",
+    "framework": "pytorch",
+    "frameworkVersion": "latest",
+    "example": "a = torch.randn(3, 3)\r\na\r\ntensor([[ 0.2309,  0.5207,  2.0049],)\r\n[ 0.2072, -1.0680,  0.6602],\r\n[ 0.3480, -0.5211, -0.4573]])",
+    "outputs": [
+        {
+            "name": "output",
+            "datatype": "aizoo.tensor",
+            "description": "The output tensor."
+        }
+    ],
+    "inputs": [
+        {
+            "name": "input",
+            "datatype": "aizoo.tensor",
+            "description": "The input tensor."
+        },
+        {
+            "name": "diagonal",
+            "datatype": "aizoo.number",
+            "description": " the diagonal to consider. Default: 0.",
+            "value": 0
+        }
+    ],
+    "componentVersion": "1.0.1"
+}
