@@ -19,4 +19,4 @@
 - Hardshrink
 - Hardsigmoid
 - Hardtanh
-- frexp
+- frexp2
